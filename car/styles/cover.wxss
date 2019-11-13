@@ -1,0 +1,29 @@
+.cards{
+    padding: 10px;  
+    }
+.card{
+    background: #ffffff;
+    margin-bottom: 16px;
+}
+.card image{
+    position: relative;
+}
+.card image, .card video{
+    height: 36vh;
+}
+.card .content{
+    padding: 48rpx 48rpx 64rpx;
+
+}
+.card .header{
+    font-size: 48rpx;
+    font-weight: bold;
+    letter-spacing: 2rpx;
+    margin-bottom: 48rpx;
+}
+.card .sub-header{
+    font-size: 32rpx;
+    letter-spacing: 3rpx;
+    tran
+   
+}
