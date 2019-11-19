@@ -1,0 +1,62 @@
+Page({
+  data:{
+    entities:[
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'A',
+        description:'a'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'B',
+        description:'bb'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'C',
+        description:'cc'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'A',
+        description:'a'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'B',
+        description:'bb'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'C',
+        description:'cc'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'A',
+        description:'a'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'B',
+        description:'bb'
+      },
+      {
+        imageUrl:'../../assets/images/landscape.png',
+        title:'C',
+        description:'cc'
+      }
+    ]
+
+  },
+  onLoad(){
+    console.log('onload');
+  },
+  onReachBottom(){
+    // console.log('触底了');
+    const data = [...this.data.entities,...this.data.entities];
+    this.setData({
+      entities:data
+    })
+  }
+})
