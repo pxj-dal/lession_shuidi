@@ -1,3 +1,10 @@
+git 分支的概念：
 新建了一个自己的开发分支，日常开发都应该在这个分支上，这样就不影响别人，等开发完成之后，再将代码合并到主分支。
+git status
 git branch xxx  创建一个（自己）分支
+git branch
 git checkout xxx 切换到某个分支
+git branch
+git merge xxx
+bug fixed
+git checkout -b fix-001 创建一个分支并直接切换
