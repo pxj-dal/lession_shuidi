@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //构建一个发布者对象
+    var saleOffices={}
+    //发布 售房信息
+    //多个事件订阅时,
+    saleOffices.clientList=[];//订阅者
+    //生成发布订阅的关系
+    saleOffices.listen=function(fn){
+        this.clientList.push(fn);
+    }
+    </script>
+</body>
+</html>
