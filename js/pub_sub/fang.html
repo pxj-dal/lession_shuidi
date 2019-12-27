@@ -9,7 +9,9 @@
 <body>
     <script>
         //构建一个发布者对象
-    var saleOffices={}
+    var saleOffices={
+        name:'万科润园'
+    }
     //发布 售房信息
     //多个事件订阅时,
     saleOffices.clientList=[];//订阅者
@@ -17,6 +19,33 @@
     saleOffices.listen=function(fn){
         this.clientList.push(fn);
     }
+    saleOffices.trigger=function(){
+        for(var i=0,fn;fn=this.clientList[i++];)
+        {
+            fn.apply(this,arguments);
+            // fn.call(this,...arguments);
+        }
+    }
+    saleOffices.listen(function(price,squareMeter){
+        console.log('小红订阅了');
+        console.log('楼盘名:'+this.name);
+        console.log('价格='+price);
+        console.log('squareMeter='+squareMeter);
+    });
+    saleOffices.listen(function(price,squareMeter){
+        console.log('小明订阅了');
+        console.log('楼盘名:'+this.name);
+        console.log('价格='+price);
+        console.log('squareMeter='+squareMeter);
+
+    });
+    saleOffices.trigger(20000,88);
+    //五秒后再执行某件事
+    setTimeout(()=>{
+        saleOffices.trigger(24000,110);
+    },5000)
+
+
     </script>
 </body>
 </html>

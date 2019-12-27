@@ -8,9 +8,23 @@
     - 事件发生时是怎么执行的?
     js是单线程语言  onload
     轮循注册事件的地方
+
+
 订阅 发布者模式
   
 房 -> 楼房 ->发布者(发布有房卖的信息)
 买房者->订阅者
 建模:
 
+- listen 添加订阅者
+    saleOffices.clientList.push(fn);形成订阅关系
+- saleOffice 发布者
+    trigger 有事通知
+    把所有的订阅者都执行一遍
+- apply 函数除运行外,指定其this指向, arguments
+- document.body.addEventListener('click',fn);
+    发布者 document.body 有很多订阅者
+    订阅者 fn->document.body.events=[]
+    click
+    trigger
+    
