@@ -17,7 +17,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
 	"appid": "wx4ddc1e3efaab6b93",
-	"projectname": "todolist",
+	"projectname": "todos",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
