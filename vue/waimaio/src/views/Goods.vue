@@ -13,7 +13,12 @@ import cartcontrol from '../components/cartcontrol/cartcontrol'
 import food from '../components/food/food'
 export default {
   components:{
-
+    shopcart,
+    cartcontrol,
+    food
+  },
+  created(){
+    this.goods=response.data;
   }
   
 }
