@@ -1,5 +1,6 @@
 // 咖啡和茶的基类
 // 构造一个饮料类
+// 今天看了coffee
 function Beverage(){
 
 }
