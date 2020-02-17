@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+  <a href="http://www.baidu.com" style="pointer-events:none;">去吧</a>
   <div id="root">
     <!-- {{}} -->
     <!-- 带有波浪感觉？很好的交互性感觉，手指按下去，晕开来的
@@ -33,13 +34,13 @@
       //props 参数管家
       console.log(props);
       // console.log(props.children)
-      let { children, type, circle, onClick, block } = props
+      let { children, type, shape, onClick, block } = props
       // console.log(type);
       return (
         // <div className ="xButton ripple" >
         <div 
         onClick={onClick}
-        className = {`xButton ripple ${type?type:''} ${circle?circle:''} ${block?'block':''}`} >
+        className = {`xButton ripple ${type?type:''} ${shape?shape:''} ${block?'block':''}`} >
         { children }
         </div>
       )
